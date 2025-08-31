@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #Box{
+        text-align: center;
+        justify-content: center;
+       }
+        .Rating {
+            font-size: 3em; 
+            cursor: pointer; 
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="Box">
+         <h1>Javascript Rating</h1>
+        
+         <span class="Rating">★</span>
+         <span class="Rating">★</span>
+         <span class="Rating">★</span>
+         <span class="Rating">★</span>
+         <span class="Rating">★</span>
+
+        <div id="Display"></div>
+  
+    </div>
+    <script>
+        const stars = document.querySelectorAll('.Rating');
+        const Display = document.getElementById('Display');
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', function(){
+                Display.innerText = index + 1;
+            });
+        });
+    </script>
+</body>
+</html>
